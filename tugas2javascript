@@ -1,0 +1,41 @@
+// input data pegawai
+let nama = "nama_kalian";
+let jabatan = "manager";
+let status = "bebas";
+
+// hitung gaji pokok berdasarkan jabatan
+let gajiPokok = 0;
+switch (jabatan) {
+  case "manager":
+    gajiPokok = 10;
+    break;
+  case "Asisten manager":
+    gajiPokok = 8;
+    break;
+  case "Staff":
+    gajiPokok = 5;
+    break;
+  default:
+    console.log("Jabatan tidak dikenali");
+}
+
+// hitung tunjangan jabatan
+let tunjanganJabatan = gajiPokok * 0.1;
+
+// hitung BPJS
+let bpjs = gajiPokok * 0.1;
+
+// hitung tunjangan keluarga
+let tunjanganKeluarga = status === "menikah" ? gajiPokok * 0.1 : 0;
+
+// hitung total pendapatan atau penghasilan
+let totalPendapatan = gajiPokok + tunjanganJabatan + bpjs + tunjanganKeluarga;
+
+// cetak data pegawai, jabatan, gaji, dan lainnya
+console.log(`Nama Pegawai: ${nama}`);
+console.log(`Jabatan: ${jabatan}`);
+console.log(`Gaji Pokok: ${gajiPokok} Juta`);
+console.log(`Tunjangan Jabatan: ${tunjanganJabatan} Juta`);
+console.log(`BPJS: ${bpjs} Juta`);
+console.log(`Tunjangan Keluarga: ${tunjanganKeluarga} Juta`);
+console.log(`Total Pendapatan: ${totalPendapatan} Juta`);
