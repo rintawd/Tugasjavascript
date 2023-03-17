@@ -1,0 +1,56 @@
+# New Chat
+
+### **system**:
+
+Enter your message to start a chat. This could be a question, a statement, or any other text.
+
+---
+
+### **user**:
+
+Buatlah file jquery dengan skenario
+
+Ada sebuah gambar yang ditampilkan pada web, ketika gambar tersebut diklik maka gambar tersebut menjadi hilang (hide) 
+
+jika 1 gambar berhasil, tambahkan menjadi 3 gambar sekaligus pada satu file 
+
+---
+
+### **assistant**:
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Hide Images</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			// hide single image on click
+			$('#single-image').click(function(){
+				$(this).hide();
+			});
+
+			// hide multiple images on click
+			$('#multi-image').click(function(){
+				$('.image').hide();
+			});
+		});
+	</script>
+</head>
+<body>
+	<!-- single image -->
+	<img id="single-image" src="https://via.placeholder.com/300x200">
+
+	<!-- multiple images -->
+	<div id="multi-image">
+		<img class="image" src="https://via.placeholder.com/300x200">
+		<img class="image" src="https://via.placeholder.com/300x200">
+		<img class="image" src="https://via.placeholder.com/300x200">
+	</div>
+</body>
+</html>
+
+---
+
